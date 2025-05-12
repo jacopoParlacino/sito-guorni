@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servizi - Guorni Edilizia</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Stili per il logo ingrandito */
+        .logo img {
+            width: 180px; /* Aumenta la larghezza del logo */
+            height: auto; /* Mantiene le proporzioni */
+            transition: all 0.3s ease; /* Aggiunge una transizione fluida */
+        }
+        
+        @media (max-width: 768px) {
+            .logo img {
+                width: 150px; /* Dimensione leggermente ridotta su dispositivi mobili */
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header con navigazione -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="immagini/logo.jpeg" alt="Guorni Edilizia Logo">
+                </a>
+            </div>
+            <nav>
+                <ul class="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="servizi.html" class="active">Servizi</a></li>
+                    <li><a href="progetti.html">Progetti</a></li>
+                    <li><a href="chi-siamo.html">Chi Siamo</a></li>
+                    <li><a href="contatti.html">Contatti</a></li>
+                </ul>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Banner Servizi -->
+    <section class="page-banner">
+        <div class="banner-content">
+            <h1>I Nostri Servizi</h1>
+            <p>Soluzioni complete per ogni esigenza edilizia</p>
+        </div>
+    </section>
+
+    <!-- Introduzione Servizi -->
+    <section class="services-intro">
+        <div class="container">
+            <div class="intro-content">
+                <h2>Eccellenza in Ogni Progetto</h2>
+                <p>Guorni Edilizia offre una gamma completa di servizi per soddisfare ogni esigenza nel settore delle costruzioni e ristrutturazioni. Il nostro team di professionisti qualificati garantisce risultati di alta qualità, rispettando tempistiche e budget concordati.</p>
+                <p>Che si tratti di un piccolo intervento di ristrutturazione o di un grande progetto edilizio, mettiamo a disposizione la nostra esperienza e competenza per realizzare i vostri obiettivi.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servizi Dettagliati -->
+    <section class="services-detailed">
+        <div class="container">
+            <!-- Costruzioni -->
+            <div class="service-item" id="costruzioni">
+                <div class="service-image">
+                    <img src="immagini/placeholder-costruzioni.jpg" alt="Servizio Costruzioni">
+                </div>
+                <div class="service-details">
+                    <div class="service-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Costruzioni</h3>
+                    <p>Realizziamo edifici residenziali, commerciali e industriali con materiali di alta qualità e tecniche costruttive all'avanguardia. Il nostro approccio integrato alla costruzione garantisce progetti completati nei tempi previsti e secondo gli standard più elevati.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Edifici residenziali (ville, appartamenti, complessi abitativi)</li>
+                        <li><i class="fas fa-check"></i> Strutture commerciali (uffici, negozi, centri commerciali)</li>
+                        <li><i class="fas fa-check"></i> Edifici industriali e logistici</li>
+                        <li><i class="fas fa-check"></i> Costruzioni eco-sostenibili</li>
+                        <li><i class="fas fa-check"></i> Ampliamenti e sopraelevazioni</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Ristrutturazioni -->
+            <div class="service-item" id="ristrutturazioni">
+                <div class="service-details">
+                    <div class="service-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Ristrutturazioni</h3>
+                    <p>Trasformiamo e rinnoviamo gli spazi esistenti con interventi mirati e soluzioni personalizzate. Dalla ristrutturazione di singoli appartamenti al recupero di interi edifici storici, garantiamo risultati che valorizzano gli immobili rispettandone l'identità.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Ristrutturazioni complete di appartamenti e case</li>
+                        <li><i class="fas fa-check"></i> Recupero e restauro di edifici storici</li>
+                        <li><i class="fas fa-check"></i> Riqualificazione energetica</li>
+                        <li><i class="fas fa-check"></i> Rifacimento di bagni e cucine</li>
+                        <li><i class="fas fa-check"></i> Adeguamento normativo e abbattimento barriere architettoniche</li>
+                    </ul>
+                </div>
+                <div class="service-image">
+                    <img src="immagini/placeholder-ristrutturazioni.jpg" alt="Servizio Ristrutturazioni">
+                </div>
+            </div>
+
+            <!-- Progetti Chiavi in Mano -->
+            <div class="service-item" id="chiavi-in-mano">
+                <div class="service-image">
+                    <img src="immagini/placeholder-chiavi-in-mano.jpg" alt="Servizio Chiavi in Mano">
+                </div>
+                <div class="service-details">
+                    <div class="service-icon">
+                        <i class="fas fa-hard-hat"></i>
+                    </div>
+                    <h3>Progetti Chiavi in Mano</h3>
+                    <p>Gestiamo l'intero processo edilizio dalla progettazione alla consegna finale. Il nostro servizio chiavi in mano offre un unico interlocutore per tutte le fasi del progetto, semplificando la gestione e garantendo un risultato coordinato e di qualità.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Consulenza e progettazione architettonica</li>
+                        <li><i class="fas fa-check"></i> Pratiche amministrative e autorizzazioni</li>
+                        <li><i class="fas fa-check"></i> Direzione lavori e coordinamento sicurezza</li>
+                        <li><i class="fas fa-check"></i> Realizzazione completa dell'opera</li>
+                        <li><i class="fas fa-check"></i> Finiture e arredamento</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Consulenza Tecnica -->
+            <div class="service-item" id="consulenza">
+                <div class="service-details">
+                    <div class="service-icon">
+                        <i class="fas fa-clipboard-list"></i>
+                    </div>
+                    <h3>Consulenza Tecnica</h3>
+                    <p>Offriamo servizi di consulenza tecnica per supportare i clienti nelle decisioni relative ai loro progetti edilizi. Il nostro team di esperti fornisce valutazioni, perizie e soluzioni tecniche per ottimizzare investimenti e risultati.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Valutazioni immobiliari e due diligence</li>
+                        <li><i class="fas fa-check"></i> Perizie tecniche e certificazioni</li>
+                        <li><i class="fas fa-check"></i> Consulenza per efficientamento energetico</li>
+                        <li><i class="fas fa-check"></i> Analisi di fattibilità e studi preliminari</li>
+                        <li><i class="fas fa-check"></i> Assistenza per accesso a bonus e incentivi fiscali</li>
+                    </ul>
+                </div>
+                <div class="service-image">
+                    <img src="immagini/placeholder-consulenza.jpg" alt="Servizio Consulenza Tecnica">
+                </div>
+            </div>
+
+            <!-- Manutenzione -->
+            <div class="service-item" id="manutenzione">
+                <div class="service-image">
+                    <img src="immagini/placeholder-manutenzione.jpg" alt="Servizio Manutenzione">
+                </div>
+                <div class="service-details">
+                    <div class="service-icon">
+                        <i class="fas fa-wrench"></i>
+                    </div>
+                    <h3>Manutenzione e Assistenza</h3>
+                    <p>Garantiamo servizi di manutenzione ordinaria e straordinaria per preservare il valore e la funzionalità degli immobili nel tempo. Il nostro servizio di assistenza è disponibile per interventi programmati o emergenze.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Manutenzione programmata di edifici</li>
+                        <li><i class="fas fa-check"></i> Interventi di riparazione e ripristino</li>
+                        <li><i class="fas fa-check"></i> Gestione e manutenzione impianti</li>
+                        <li><i class="fas fa-check"></i> Assistenza post-vendita</li>
+                        <li><i class="fas fa-check"></i> Pronto intervento per emergenze</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Hai un Progetto in Mente?</h2>
+            <p>Contattaci per una consulenza gratuita e senza impegno</p>
+            <a href="contatti.html" class="btn btn-primary">Richiedi Preventivo</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="immagini/logo.jpeg" alt="Guorni Edilizia Logo">
+                    <p>Costruiamo il futuro con solide fondamenta</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Collegamenti Rapidi</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="servizi.html">Servizi</a></li>
+                        <li><a href="progetti.html">Progetti</a></li>
+                        <li><a href="chi-siamo.html">Chi Siamo</a></li>
+                        <li><a href="contatti.html">Contatti</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contatti</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Via dell'Edilizia 123, Milano</p>
+                    <p><i class="fas fa-phone"></i> +39 02 1234567</p>
+                    <p><i class="fas fa-envelope"></i> info@guorniedilizia.it</p>
+                </div>
+                <div class="footer-social">
+                    <h3>Seguici</h3>
+                    <div class="social-icons">
+                        <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Guorni Edilizia. Tutti i diritti riservati.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

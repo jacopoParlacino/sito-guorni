@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contatti - Guorni Edilizia</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Stili per il logo ingrandito */
+        .logo img {
+            width: 180px; /* Aumenta la larghezza del logo */
+            height: auto; /* Mantiene le proporzioni */
+            transition: all 0.3s ease; /* Aggiunge una transizione fluida */
+        }
+        
+        @media (max-width: 768px) {
+            .logo img {
+                width: 150px; /* Dimensione leggermente ridotta su dispositivi mobili */
+            }
+        }
+        
+        /* Stili per il logo nel footer */
+        .footer-logo img {
+            width: 180px; /* Aumenta la larghezza del logo nel footer */
+            height: auto; /* Mantiene le proporzioni */
+            margin-bottom: 15px;
+        }
+        
+        /* Stili specifici per la pagina contatti */
+        .contact-section {
+            padding: 80px 0;
+            background-color: #fff;
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+        
+        .contact-info {
+            padding: 30px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .contact-info h3 {
+            margin-bottom: 20px;
+            color: #2c3e50;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .contact-info h3:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: #e67e22;
+        }
+        
+        .contact-detail {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        
+        .contact-icon {
+            font-size: 1.5rem;
+            color: #e67e22;
+            margin-right: 15px;
+            min-width: 30px;
+            text-align: center;
+        }
+        
+        .contact-text h4 {
+            margin-bottom: 5px;
+            color: #2c3e50;
+        }
+        
+        .contact-text p {
+            color: #7f8c8d;
+        }
+        
+        .contact-form {
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #2c3e50;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: 'Roboto', sans-serif;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: #e67e22;
+        }
+        
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .form-message {
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 4px;
+        }
+        
+        .form-message.success {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        
+        .form-message.error {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+        
+        .map-section {
+            padding: 40px 0 80px;
+            background-color: #f9f9f9;
+        }
+        
+        .map-container {
+            height: 400px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        
+        @media (max-width: 768px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header con navigazione -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="immagini/logo.jpeg" alt="Guorni Edilizia Logo">
+                </a>
+            </div>
+            <nav>
+                <ul class="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="servizi.html">Servizi</a></li>
+                    <li><a href="progetti.html">Progetti</a></li>
+                    <li><a href="chi-siamo.html">Chi Siamo</a></li>
+                    <li><a href="contatti.html" class="active">Contatti</a></li>
+                </ul>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Banner Contatti -->
+    <section class="page-banner">
+        <div class="banner-content">
+            <h1>Contattaci</h1>
+            <p>Siamo qui per rispondere alle tue domande</p>
+        </div>
+    </section>
+
+    <!-- Sezione Contatti -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Informazioni di Contatto</h3>
+                    <div class="contact-detail">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Indirizzo</h4>
+                            <p>Via dell'Edilizia 123<br>20100 Milano, Italia</p>
+                        </div>
+                    </div>
+                    <div class="contact-detail">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Telefono</h4>
+                            <p>+39 02 1234567<br>+39 333 1234567</p>
+                        </div>
+                    </div>
+                    <div class="contact-detail">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Email</h4>
+                            <p>info@guorniedilizia.it<br>preventivi@guorniedilizia.it</p>
+                        </div>
+                    </div>
+                    <div class="contact-detail">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Orari di Apertura</h4>
+                            <p>Lunedì - Venerdì: 8:30 - 18:00<br>Sabato: 9:00 - 13:00<br>Domenica: Chiuso</p>
+                        </div>
+                    </div>
+                    <div class="social-media">
+                        <h4>Seguici sui Social</h4>
+                        <div class="social-icons">
+                            <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Inviaci un Messaggio</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Nome e Cognome*</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email*</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Telefono</label>
+                            <input type="tel" id="phone" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Oggetto*</label>
+                            <input type="text" id="subject" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Messaggio*</label>
+                            <textarea id="message" class="form-control" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>
+                                <input type="checkbox" required> Acconsento al trattamento dei dati personali ai sensi del GDPR*
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Invia Messaggio</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mappa -->
+    <section class="map-section">
+        <div class="container">
+            <h2 class="section-title">Dove Siamo</h2>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2798.1731957316747!2d9.186501776715672!3d45.46512623566306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c6a906ef60a7%3A0x4aea8d33714ade48!2sMilano%20MI!5e0!3m2!1sit!2sit!4v1699000000000!5m2!1sit!2sit" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="immagini/logo.jpeg" alt="Guorni Edilizia Logo">
+                    <p>Costruiamo il futuro con solide fondamenta</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Collegamenti Rapidi</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="servizi.html">Servizi</a></li>
+                        <li><a href="progetti.html">Progetti</a></li>
+                        <li><a href="chi-siamo.html">Chi Siamo</a></li>
+                        <li><a href="contatti.html">Contatti</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contatti</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Via dell'Edilizia 123, Milano</p>
+                    <p><i class="fas fa-phone"></i> +39 02 1234567</p>
+                    <p><i class="fas fa-envelope"></i> info@guorniedilizia.it</p>
+                </div>
+                <div class="footer-social">
+                    <h3>Seguici</h3>
+                    <div class="social-icons">
+                        <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Guorni Edilizia. Tutti i diritti riservati.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Script specifico per la pagina contatti
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactForm = document.getElementById('contactForm');
+            
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Qui si implementerebbe la logica di invio del form a un server
+                    // Per ora mostriamo solo un messaggio di successo
+                    const formMessage = document.createElement('div');
+                    formMessage.className = 'form-message success';
+                    formMessage.textContent = 'Grazie per averci contattato! Ti risponderemo al più presto.';
+                    
+                    // Rimuovi eventuali messaggi precedenti
+                    const oldMessages = contactForm.querySelectorAll('.form-message');
+                    oldMessages.forEach(msg => msg.remove());
+                    
+                    contactForm.appendChild(formMessage);
+                    contactForm.reset();
+                    
+                    // Scroll al messaggio
+                    formMessage.scrollIntoView({ behavior: 'smooth' });
+                    
+                    // Rimuovi il messaggio dopo 5 secondi
+                    setTimeout(() => {
+                        formMessage.remove();
+                    }, 5000);
+                });
+            }
+        });
+    </script>
+</body>
+</html>

@@ -3,191 +3,258 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guarnieri Costruzioni - Costruzioni e Ristrutturazioni a Leinì, Torino</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <title>Guorni Edilizia - Costruzioni e Ristrutturazioni</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Stili per il logo ingrandito */
+        .logo img {
+            width: 180px; /* Aumenta la larghezza del logo */
+            height: auto; /* Mantiene le proporzioni */
+            transition: all 0.3s ease; /* Aggiunge una transizione fluida */
+        }
+        
+        @media (max-width: 768px) {
+            .logo img {
+                width: 150px; /* Dimensione leggermente ridotta su dispositivi mobili */
+            }
+        }
+        
+        /* Stili per il logo nel footer */
+        .footer-logo img {
+            width: 180px; /* Aumenta la larghezza del logo nel footer */
+            height: auto; /* Mantiene le proporzioni */
+            margin-bottom: 15px;
+        }
+    </style>
 </head>
 <body>
-    <!-- Header e Navigazione -->
+    <!-- Header con navigazione -->
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-            <div class="container">
-                <a class="navbar-brand" href="#">
-                    <img src="/immagini/logo.jpeg" alt="Guarnieri Costruzioni" height="60">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="immagini/logo.jpeg" alt="Guorni Edilizia Logo">
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="chi-siamo.html">Chi Siamo</a></li>
-                        <li class="nav-item"><a class="nav-link" href="servizi.html">Servizi</a></li>
-                        <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contatti.html">Contatti</a></li>
-                    </ul>
-                </div>
             </div>
-        </nav>
+            <nav>
+                <ul class="menu">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="servizi.html">Servizi</a></li>
+                    <li><a href="progetti.html">Progetti</a></li>
+                    <li><a href="chi-siamo.html">Chi Siamo</a></li>
+                    <li><a href="contatti.html">Contatti</a></li>
+                </ul>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
     </header>
 
-    <!-- Hero Section con Slider -->
-    <section class="hero-section">
-        <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="img/slider1.jpg" class="d-block w-100" alt="Progetti Guarnieri">
-                    <div class="carousel-caption">
-                        <h1>Guarnieri Costruzioni</h1>
-                        <p>Costruiamo il vostro futuro con passione e professionalità</p>
-                        <a href="contatti.html" class="btn btn-primary btn-lg">Richiedi Preventivo</a>
-                    </div>
-                </div>
-                <!-- Altri slide qui -->
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            </button>
-        </div>
-    </section>
-
-    <!-- Sezione Servizi -->
-    <section class="services-section py-5">
-        <div class="container">
-            <h2 class="text-center mb-5">I Nostri Servizi</h2>
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100">
-                        <img src="img/ristrutturazioni.jpg" class="card-img-top" alt="Ristrutturazioni">
-                        <div class="card-body">
-                            <h3 class="card-title">Ristrutturazioni Edili</h3>
-                            <p class="card-text">Ristrutturiamo immobili su tutto il territorio piemontese, con particolare attenzione a ville, alloggi e appartamenti a Leinì.</p>
-                            <a href="servizi.html#ristrutturazioni" class="btn btn-outline-primary">Scopri di più</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100">
-                        <img src="img/costruzioni.jpg" class="card-img-top" alt="Costruzioni">
-                        <div class="card-body">
-                            <h3 class="card-title">Costruzioni Conto Terzi</h3>
-                            <p class="card-text">Progettiamo e costruiamo immobili di pregio caratterizzati da un'elevata qualità dei materiali, certificati e garantiti.</p>
-                            <a href="servizi.html#costruzioni" class="btn btn-outline-primary">Scopri di più</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100">
-                        <img src="img/efficienza.jpg" class="card-img-top" alt="Efficienza Energetica">
-                        <div class="card-body">
-                            <h3 class="card-title">Efficienza Energetica</h3>
-                            <p class="card-text">Utilizziamo tecnologie che massimizzano il risparmio energetico, con pannelli solari e impianti di teleriscaldamento.</p>
-                            <a href="servizi.html#efficienza" class="btn btn-outline-primary">Scopri di più</a>
-                        </div>
-                    </div>
-                </div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Costruiamo il Futuro, Preserviamo la Tradizione</h1>
+            <p>Soluzioni edilizie innovative e di qualità per ogni esigenza</p>
+            <div class="cta-buttons">
+                <a href="contatti.html" class="btn btn-primary">Richiedi Preventivo</a>
+                <a href="servizi.html" class="btn btn-secondary">Scopri i Nostri Servizi</a>
             </div>
         </div>
     </section>
 
-    <!-- Sezione Chi Siamo -->
-    <section class="about-section py-5 bg-light">
+    <!-- Servizi in Evidenza -->
+    <section class="featured-services">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <h2>Chi Siamo</h2>
-                    <p>Guarnieri Costruzioni è un'azienda con esperienza pluriennale nel settore edile, specializzata in costruzioni e ristrutturazioni di alta qualità.</p>
-                    <p>Le competenze accumulate e le professionalità presenti in azienda ci consentono di seguire a 360° tutte le fasi del processo di costruzione e ristrutturazione.</p>
-                    <a href="chi-siamo.html" class="btn btn-primary">Scopri la nostra storia</a>
+            <h2 class="section-title">I Nostri Servizi</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Costruzioni</h3>
+                    <p>Realizziamo edifici residenziali e commerciali con materiali di alta qualità e tecniche all'avanguardia.</p>
+                    <a href="servizi.html#costruzioni" class="read-more">Scopri di più</a>
                 </div>
-                <div class="col-lg-6">
-                    <img src="img/team.jpg" alt="Team Guarnieri Costruzioni" class="img-fluid rounded">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Ristrutturazioni</h3>
+                    <p>Rinnoviamo e valorizziamo gli spazi esistenti con interventi mirati e soluzioni personalizzate.</p>
+                    <a href="servizi.html#ristrutturazioni" class="read-more">Scopri di più</a>
                 </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-hard-hat"></i>
+                    </div>
+                    <h3>Progetti Chiavi in Mano</h3>
+                    <p>Gestiamo l'intero processo edilizio dalla progettazione alla consegna finale.</p>
+                    <a href="servizi.html#chiavi-in-mano" class="read-more">Scopri di più</a>
+                </div>
+            </div>
+            <div class="view-all">
+                <a href="servizi.html" class="btn btn-outline">Tutti i Servizi</a>
             </div>
         </div>
     </section>
 
-    <!-- Sezione Progetti Recenti -->
-    <section class="recent-projects py-5">
+    <!-- Progetti Recenti -->
+    <section class="recent-projects">
         <div class="container">
-            <h2 class="text-center mb-5">Progetti Recenti</h2>
-            <div class="row">
-                <!-- Progetti qui -->
-                <div class="col-md-4 mb-4">
-                    <div class="project-card">
-                        <img src="img/progetto1.jpg" alt="Villa a Leinì" class="img-fluid">
-                        <div class="project-info">
-                            <h3>Villa Residenziale</h3>
-                            <p>Leinì, Torino</p>
-                            <a href="portfolio.html" class="btn btn-sm btn-light">Vedi Dettagli</a>
-                        </div>
+            <h2 class="section-title">Progetti Recenti</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="immagini/Villa Moderna.jpeg" alt="Progetto Residenziale">
+                    </div>
+                    <div class="project-info">
+                        <h3>Villa Moderna</h3>
+                        <p>Costruzione di una villa moderna con materiali eco-sostenibili</p>
+                        <a href="progetti.html#villa-moderna" class="read-more">Vedi Progetto</a>
                     </div>
                 </div>
-                <!-- Altri progetti -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="immagini/Centro Commerciale.jpeg" alt="Progetto Commerciale">
+                    </div>
+                    <div class="project-info">
+                        <h3>Centro Commerciale</h3>
+                        <p>Ristrutturazione completa di un centro commerciale di 5000mq</p>
+                        <a href="progetti.html#centro-commerciale" class="read-more">Vedi Progetto</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="immagini/Complesso Industriale.jpeg" alt="Progetto Industriale">
+                    </div>
+                    <div class="project-info">
+                        <h3>Complesso Industriale</h3>
+                        <p>Realizzazione di un complesso industriale con standard energetici elevati</p>
+                        <a href="progetti.html#complesso-industriale" class="read-more">Vedi Progetto</a>
+                    </div>
+                </div>
             </div>
-            <div class="text-center mt-4">
-                <a href="portfolio.html" class="btn btn-outline-primary btn-lg">Visualizza tutti i progetti</a>
+            <div class="view-all">
+                <a href="progetti.html" class="btn btn-outline">Tutti i Progetti</a>
             </div>
         </div>
     </section>
 
-    <!-- Sezione Contatti Rapidi -->
-    <section class="quick-contact py-5 bg-primary text-white">
+    <!-- Perché Sceglierci -->
+    <section class="why-choose-us">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-8">
-                    <h2>Hai un progetto in mente?</h2>
-                    <p class="lead">Contattaci per un preventivo gratuito e senza impegno.</p>
+            <h2 class="section-title">Perché Scegliere Guorni Edilizia</h2>
+            <div class="features-grid">
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <h3>Qualità Superiore</h3>
+                    <p>Utilizziamo solo materiali di prima scelta e tecniche costruttive all'avanguardia.</p>
                 </div>
-                <div class="col-lg-4 text-lg-end">
-                    <a href="contatti.html" class="btn btn-light btn-lg">Contattaci Ora</a>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Puntualità</h3>
+                    <p>Rispettiamo rigorosamente le tempistiche concordate per ogni progetto.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Team Esperto</h3>
+                    <p>Il nostro personale qualificato garantisce risultati eccellenti in ogni fase.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Sostenibilità</h3>
+                    <p>Adottiamo soluzioni eco-sostenibili per ridurre l'impatto ambientale.</p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Testimonianze -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">Cosa Dicono i Nostri Clienti</h2>
+            <div class="testimonials-slider">
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"Guorni Edilizia ha realizzato la casa dei nostri sogni con grande professionalità e attenzione ai dettagli. Consigliamo vivamente i loro servizi."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <h4>Marco e Giulia Bianchi</h4>
+                        <p>Villa Residenziale, Milano</p>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"La ristrutturazione del nostro ufficio è stata completata nei tempi previsti e con risultati eccellenti. Un team affidabile e competente."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <h4>Studio Legale Rossi</h4>
+                        <p>Ristrutturazione Uffici, Roma</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Pronti a Realizzare il Vostro Progetto?</h2>
+            <p>Contattateci oggi stesso per una consulenza gratuita</p>
+            <a href="contatti.html" class="btn btn-primary">Richiedi Informazioni</a>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white py-4">
+    <footer>
         <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <h4>Guarnieri Costruzioni S.a.s</h4>
-                    <p>Via Example, 123<br>10040 Leinì (TO)<br>Italia</p>
-                    <p>Tel: +39 011 1234567<br>Email: info@guarnieri.eu</p>
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="immagini/logo.jpeg" alt="Guorni Edilizia Logo">
+                    <p>Costruiamo il futuro con solide fondamenta</p>
                 </div>
-                <div class="col-md-4">
-                    <h4>Collegamenti Rapidi</h4>
-                    <ul class="list-unstyled">
-                        <li><a href="#" class="text-white">Home</a></li>
-                        <li><a href="chi-siamo.html" class="text-white">Chi Siamo</a></li>
-                        <li><a href="servizi.html" class="text-white">Servizi</a></li>
-                        <li><a href="portfolio.html" class="text-white">Portfolio</a></li>
-                        <li><a href="contatti.html" class="text-white">Contatti</a></li>
+                <div class="footer-links">
+                    <h3>Collegamenti Rapidi</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="servizi.html">Servizi</a></li>
+                        <li><a href="progetti.html">Progetti</a></li>
+                        <li><a href="chi-siamo.html">Chi Siamo</a></li>
+                        <li><a href="contatti.html">Contatti</a></li>
                     </ul>
                 </div>
-                <div class="col-md-4">
-                    <h4>Seguici</h4>
+                <div class="footer-contact">
+                    <h3>Contatti</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Via dell'Edilizia 123, Milano</p>
+                    <p><i class="fas fa-phone"></i> +39 02 1234567</p>
+                    <p><i class="fas fa-envelope"></i> info@guorniedilizia.it</p>
+                </div>
+                <div class="footer-social">
+                    <h3>Seguici</h3>
                     <div class="social-icons">
-                        <a href="#" class="text-white me-2"><i class="bi bi-facebook"></i></a>
-                        <a href="#" class="text-white me-2"><i class="bi bi-instagram"></i></a>
-                        <a href="#" class="text-white me-2"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
             </div>
-            <hr>
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <p>&copy; 2023 Guarnieri Costruzioni S.a.s. Tutti i diritti riservati.</p>
-                </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Guorni Edilizia. Tutti i diritti riservati.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Script JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
