@@ -369,6 +369,30 @@ nav {
 .testimonials {
     padding: 80px 0;
     background-color: #f9f9f9;
+    position: relative;
+    overflow: hidden;
+}
+
+.testimonials::before {
+    content: '\201C';
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    font-size: 15rem;
+    color: rgba(230, 126, 34, 0.05);
+    font-family: Georgia, serif;
+    line-height: 0;
+}
+
+.testimonials::after {
+    content: '\201D';
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+    font-size: 15rem;
+    color: rgba(230, 126, 34, 0.05);
+    font-family: Georgia, serif;
+    line-height: 0;
 }
 
 .testimonials-slider {
@@ -533,6 +557,252 @@ footer {
     font-size: 0.9rem;
 }
 
+/* Stili per la pagina Servizi */
+.page-banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../immagini/hero-bg.jpg') no-repeat center center/cover;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    padding: 0 20px;
+}
+
+.banner-content {
+    max-width: 800px;
+}
+
+.banner-content h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.banner-content p {
+    font-size: 1.2rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.services-intro {
+    padding: 60px 0;
+    background-color: #fff;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.services-intro::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 200px;
+    height: 200px;
+    background-color: rgba(230, 126, 34, 0.05);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.services-intro::after {
+    content: '';
+    position: absolute;
+    bottom: -50px;
+    left: -50px;
+    width: 200px;
+    height: 200px;
+    background-color: rgba(230, 126, 34, 0.05);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.intro-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.intro-content h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-size: 2.2rem;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.intro-content h2:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: #e67e22;
+}
+
+.intro-content p {
+    color: #7f8c8d;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.services-detailed {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+}
+
+.service-item {
+    display: flex;
+    margin-bottom: 80px;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.service-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.service-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 0;
+    background-color: #e67e22;
+    transition: height 0.5s ease;
+}
+
+.service-item:hover::before {
+    height: 100%;
+}
+
+.service-item:last-child {
+    margin-bottom: 0;
+}
+
+.service-image {
+    flex: 1;
+    min-height: 350px;
+    position: relative;
+    overflow: hidden;
+}
+
+.service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.service-item:hover .service-image img {
+    transform: scale(1.1);
+    filter: brightness(1.1) contrast(1.1);
+}
+
+.service-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.3));
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 1;
+}
+
+.service-item:hover .service-image::after {
+    opacity: 1;
+}
+
+.service-details {
+    flex: 1;
+    padding: 40px;
+    position: relative;
+}
+
+.service-details .service-icon {
+    position: absolute;
+    top: -25px;
+    left: 40px;
+    width: 70px;
+    height: 70px;
+    background-color: #e67e22;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 2rem;
+    box-shadow: 0 5px 15px rgba(230, 126, 34, 0.3);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.service-details .service-icon::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: scale(0);
+    transition: transform 0.5s ease;
+}
+
+.service-item:hover .service-icon {
+    transform: rotate(360deg);
+    background-color: #d35400;
+}
+
+.service-item:hover .service-icon::after {
+    transform: scale(1.5);
+    opacity: 0;
+}
+
+.service-details h3 {
+    color: #2c3e50;
+    margin: 20px 0 15px;
+    font-size: 1.8rem;
+}
+
+.service-details p {
+    color: #7f8c8d;
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+
+.service-features {
+    list-style: none;
+}
+
+.service-features li {
+    margin-bottom: 10px;
+    color: #34495e;
+    display: flex;
+    align-items: center;
+}
+
+.service-features li i {
+    color: #e67e22;
+    margin-right: 10px;
+    font-size: 1.1rem;
+}
+
+/* Alternanza layout per i servizi */
+.service-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
 /* Responsive Design */
 @media (max-width: 992px) {
     .hero h1 {
@@ -592,6 +862,34 @@ footer {
     .section-title {
         font-size: 2rem;
     }
+    
+    /* Responsive per pagina servizi */
+    .service-item {
+        flex-direction: column;
+    }
+    
+    .service-item:nth-child(even) {
+        flex-direction: column;
+    }
+    
+    .service-image {
+        min-height: 250px;
+    }
+    
+    .service-details {
+        padding: 30px 20px;
+    }
+    
+    .service-details .service-icon {
+        left: 20px;
+        width: 60px;
+        height: 60px;
+        font-size: 1.8rem;
+    }
+    
+    .banner-content h1 {
+        font-size: 2.2rem;
+    }
 }
 
 @media (max-width: 576px) {
@@ -609,5 +907,54 @@ footer {
     
     .service-card, .project-card, .testimonial {
         padding: 20px;
+    }
+    
+    /* Responsive per pagina servizi su schermi piccoli */
+    .page-banner {
+        height: 30vh;
+    }
+    
+    .banner-content h1 {
+        font-size: 1.8rem;
+    }
+    
+    .banner-content p {
+        font-size: 1rem;
+    }
+    
+    .intro-content h2 {
+        font-size: 1.8rem;
+    }
+    
+    .intro-content p {
+        font-size: 1rem;
+    }
+    
+    .service-image {
+        min-height: 200px;
+    }
+    
+    .service-details {
+        padding: 25px 15px;
+    }
+    
+    .service-details h3 {
+        font-size: 1.5rem;
+        margin: 15px 0 10px;
+    }
+    
+    .service-details .service-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+        top: -20px;
+    }
+    
+    .service-features li {
+        font-size: 0.9rem;
+    }
+    
+    .service-item {
+        margin-bottom: 50px;
     }
 }
