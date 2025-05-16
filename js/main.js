@@ -152,3 +152,53 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+// Effetto header al scroll
+window.addEventListener('scroll', function() {
+    const header = document.querySelector('header');
+    if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+});
+
+// Animazione elementi al scroll
+document.addEventListener('DOMContentLoaded', function() {
+    // Funzione per controllare se un elemento è visibile nella viewport
+    function isElementInViewport(el) {
+        const rect = el.getBoundingClientRect();
+        return (
+            rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.8
+        );
+    }
+    
+    // Elementi da animare
+    const animatedElements = document.querySelectorAll('.service-card, .project-card, .feature, .testimonial');
+    
+    // Funzione per aggiungere la classe di animazione
+    function checkForAnimation() {
+        animatedElements.forEach(element => {
+            if (isElementInViewport(element) && !element.classList.contains('animated')) {
+                element.classList.add('animated');
+            }
+        });
+    }
+    
+    // Controlla all'avvio
+    checkForAnimation();
+    
+    // Controlla allo scroll
+    window.addEventListener('scroll', checkForAnimation);
+    
+    // Menu mobile
+    const menuToggle = document.querySelector('.menu-toggle');
+    const menu = document.querySelector('.menu');
+    
+    if (menuToggle) {
+        menuToggle.addEventListener('click', function() {
+            menu.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+        });
+    }
+});

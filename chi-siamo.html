@@ -8,24 +8,55 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
-        /* Stili per il logo ingrandito */
+        /* Stili per il logo ridimensionato */
         .logo img {
-            width: 180px; /* Aumenta la larghezza del logo */
+            width: 120px; /* Dimensione ridotta del logo */
             height: auto; /* Mantiene le proporzioni */
             transition: all 0.3s ease; /* Aggiunge una transizione fluida */
         }
         
         @media (max-width: 768px) {
             .logo img {
-                width: 150px; /* Dimensione leggermente ridotta su dispositivi mobili */
+                width: 100px; /* Dimensione ridotta su dispositivi mobili */
             }
         }
         
         /* Stili per il logo nel footer */
         .footer-logo img {
-            width: 180px; /* Aumenta la larghezza del logo nel footer */
+            width: 100px; /* Dimensione ridotta del logo nel footer */
             height: auto; /* Mantiene le proporzioni */
             margin-bottom: 15px;
+        }
+        
+        /* Rimozione dello sfondo della pagina */
+        body {
+            background-color: #ffffff !important;
+            background-image: none !important;
+        }
+        
+        /* Stili per le sezioni con sfondo trasparente */
+        .about-banner, 
+        .about-section, 
+        .mission-section, 
+        .team-section, 
+        .certifications-section,
+        .company-history,
+        .cta-section {
+            background-color: transparent !important;
+            background-image: none !important;
+        }
+        
+        /* Miglioramento visibilità testi */
+        .about-banner h1,
+        .about-banner p {
+            color: #2c3e50;
+            text-shadow: none;
+        }
+        
+        /* Stile per il banner senza sfondo */
+        .about-banner {
+            border-bottom: 1px solid #f1f1f1;
+            padding: 80px 0;
         }
     </style>
 </head>
@@ -54,10 +85,10 @@
     </header>
 
     <!-- Banner Chi Siamo -->
-    <section class="page-banner">
+    <section class="about-banner">
         <div class="banner-content">
             <h1>Chi Siamo</h1>
-            <p>Guarnieri Costruzioni Edili Leinì - La nostra storia e i nostri valori</p>
+            <p>La nostra storia, i nostri valori e la nostra missione</p>
         </div>
     </section>
 
@@ -261,3 +292,40 @@
     <script src="js/main.js"></script>
 </body>
 </html>
+
+<!-- Storia dell'Azienda -->
+<section class="company-history">
+    <div class="container">
+        <h2 class="section-title">La Nostra Storia</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>2005</h3>
+                    <p>Fondazione di Guorni Edilizia da parte di Mario Guorni con un piccolo team di professionisti.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>2010</h3>
+                    <p>Espansione dell'azienda e apertura della nuova sede operativa a Milano.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>2015</h3>
+                    <p>Implementazione di tecniche costruttive eco-sostenibili e ottenimento di certificazioni ambientali.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>2020</h3>
+                    <p>Celebrazione del 15° anniversario e raggiungimento di oltre 100 progetti completati con successo.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
